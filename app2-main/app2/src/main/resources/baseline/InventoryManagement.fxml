@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.28073394495412846" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="547.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.FXMLController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="135.0" prefWidth="869.0">
+               <children>
+                  <Button layoutX="324.0" layoutY="23.0" mnemonicParsing="false" onAction="#addtolist" text="Add Item" />
+                  <TextField fx:id="name_text_field" layoutX="394.0" layoutY="23.0" prefHeight="25.0" prefWidth="454.0" promptText="Item name here" />
+                  <TextField fx:id="price_text_field" layoutX="394.0" layoutY="89.0" prefHeight="25.0" prefWidth="454.0" promptText="Price in USD" />
+                  <Button fx:id="delete_all_button" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" onAction="#deleteall" text="delete all" />
+                  <MenuButton layoutX="97.0" layoutY="122.0" mnemonicParsing="false" text="Save">
+                    <items>
+                      <MenuItem fx:id="save_as" mnemonicParsing="false" onAction="#save_file" text="save as" />
+                      <MenuItem fx:id="load_saved" mnemonicParsing="false" onAction="#loadsaved" text="load saved" />
+                    </items>
+                  </MenuButton>
+                  <Button fx:id="delete_item_button" layoutX="176.0" layoutY="121.0" mnemonicParsing="false" onAction="#removefromlist" text="Delete item" />
+                  <TextField fx:id="ser1" layoutX="426.0" layoutY="55.0" prefHeight="25.0" prefWidth="39.0" promptText="XXX" />
+                  <TextField fx:id="ser2" layoutX="474.0" layoutY="55.0" prefHeight="25.0" prefWidth="39.0" promptText="XXX" />
+                  <TextField fx:id="ser3" layoutX="523.0" layoutY="55.0" prefHeight="25.0" prefWidth="39.0" promptText="XXX" />
+                  <TextField fx:id="ser" layoutX="394.0" layoutY="55.0" prefHeight="25.0" prefWidth="24.0" promptText="A" />
+                  <TextField fx:id="search_bar_text_field" layoutX="92.0" layoutY="89.0" prefHeight="25.0" prefWidth="232.0" />
+                  <Text layoutX="35.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="57.0" />
+                  <Button layoutX="578.0" layoutY="55.0" mnemonicParsing="false" onAction="#randomCharacter" prefHeight="25.0" prefWidth="111.0" text="randomize" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="667.0">
+         <children>
+            <TableView fx:id="table_view" layoutY="1.0" prefHeight="404.0" prefWidth="871.0">
+              <columns>
+                <TableColumn fx:id="serial_number" prefWidth="270.0" text="Serial Number" />
+                <TableColumn fx:id="name" minWidth="4.0" prefWidth="293.0" text="Name" />
+                  <TableColumn fx:id="value" minWidth="4.0" prefWidth="305.0" text="Price" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
